@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project</title>
+</head>
+<body>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<input id="card-one" class="hidden" type="radio" name="ok-button" checked>
+  <input id="card-two" class="hidden" type="radio" name="ok-button">
+  <input id="card-three" class="hidden" type="radio" name="ok-button">
+
+<div class="container">
+  <h1>Кредит берілетін жағдайлар</h1>
+  <div class="inner inner-one">
+    <div class="box">
+      <div class="triangle">
+      </div>
+      <p class="number">1</p>
+			<div class="text">
+				<i class="start-quote fas fa-quote-left"></i>
+				<p class="quote"> Кредит.Скоринг балл 50 ден жоғары, Инста балл 50 ден төмен болса кредит беріледі.</p>
+				<p class="credit">1 жағдай</p>
+			</div>
+      <label class="button" for="card-two">
+        <p>келесі</p>
+      </label>
+    </div>
+  </div>
+  
+  <div class="inner inner-two">
+    <div class="box">
+      <div class="triangle">
+      </div>
+      <p class="number">2</p>
+      <i class="start-quote fas fa-quote-left"></i>
+      <p class="quote">Скоринг балл 40пен 50 арасы болып, Инста балл 80 нен төмен болса, кредит беріледі</p>
+      <p class="credit"> 2 жағдай</p>
+      <label class="button" for="card-three">
+        <p>келесі</p>
+      </label>
+    </div>
+  </div>
+  
+  <div class="inner inner-three">
+    <div class="box">
+      <div class="triangle">
+      </div>
+      <p class="number">3</p>
+      <i class="start-quote fas fa-quote-left"></i>
+      <p class="quote">Скоринг 40 тан төмен болса, Инста балл канша жоғары болса да кредит берілмейди</p>
+      <p class="credit">3 жағдай</p>
+      <label class="button" for="card-one">
+        <p>келесі</p>
+      </label>
+    </div>
+  </div>
+</div>    
+
+<textarea>Гипотезы талдау қойып алуымыз керек.
+Жасы 18 ден асқан болу керек, сол жағдайда ғана кредит беріледі. Және 70 жастан төмен адамдарға кредит беру.
+
+Біз оның біліміне қараймыз. Жоғарғы оқу орнын аяқтаған ба, әлде тек мектепті ғана бітіре алған ба. Жоғарғы білімі бар қарыз алушылар уақытында ақшаны төлеп тұра алады.
+
+Жалақы жоғары болғаны біз үшін маңызды болып саналады. Себебі, жалақысы жоғарғы қарыз алушылар жақсы қарыз алушылар қатарына жата алады. Көбінесе жалақысы төмен қарыз алушылар жаман қарыз алушылар тізіміне еніп кетеді.
+
+Отбасылық жағдайы да маңызды болып саналады. Үйленген немесе бойдақ деген сияқты мәліметтер.
+
+Бала саны егер қарыз алушы үйленген болса, бала санын анықтау міндетті.
+
+Scoring баллы неғұрлым жоғары болса, клиентттің банкке қарыз төлеу ықтималдығы соғұрлым жоғарырақ болады.
+
+Сумма кредита бұны жаман қарыз алушылар мейлінше аз мөлшерде ғана заявка қалдыру керек, ал жақсы қарыз алушылар көп мөлшерде бере алады.
+
+Инста балл біздің жақсы қарыз төлеушіге де, жаман қарыз төлеушіге де мүлдем әсерін тигізбеу керек.
+
+default баллдың шығуы тікелей scoring баллға байланысты, ол қаншалықты жоғары болса кез-келген банк несие төлеу ықтималдығын тым жоғары бағалайды.</textarea>
+
+<style type="text/css">
+	
+	@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:600');
+
+
+:root {
+	--main-color: #643A7A;
+	--secondary-color: #741CAF;
+	--sans: "josefin sans", sans serif;
+}
+
+body {
+	background: #201C29;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  width: 400px;
+  height: 400px;
+	background: var(--main-color);
+  border-radius: 5px;
+  font-family: "dancing script", cursive;
+  overflow: hidden;
+  color: rgb( 121, 125, 127 );
+  letter-spacing: .5px;
+}
+h1{
+	font-size: 20px;
+	color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s;
+  visibility: hidden;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+	height: 60%;
+	transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+	font-size: 1.3rem;
+}
+
+
+.number::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: -30px;
+  width: 90px;
+  height: 180px;
+  background: var(--secondary-color);
+  transform: rotate(-45deg);
+  z-index: -1;
+	box-shadow: 0 0 .7rem rgba(0, 0, 0, .5);
+}
+
+.number {
+	font-family: var(--sans);
+  position: absolute;
+  margin: 0;
+  top: 15px;
+  right: 15px;
+  color: fade-out(#fff, .3);
+}
+
+.quote {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+}
+
+.credit {
+	position: absolute;
+	top: 60%;
+	right: 5%;
+	font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 500;
+	&::before {
+		content: "⸛ ";
+		vertical-align: middle;
+		font-size: 1.4rem;
+	}
+}
+
+.fas {
+	font-size: 3.5rem;
+	position: absolute;
+	top: 12%;
+	left: 7%;
+	color: rgba(100, 58, 122, .2);
+}
+
+input {
+  width: 100%;
+  transition: .3s;
+}
+
+
+.button p {
+  background: #802BBC;
+  text-align: center;
+  color: #fff;
+	padding: 1rem 0;
+	width: 100%;
+	font-family: var(--sans);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	transition: .2s ease-out;
+}
+
+.button p:hover {
+  background: var(--secondary-color);
+  cursor: pointer; 
+}
+
+#card-one:checked ~ .container .inner-one, 
+#card-two:checked ~ .container .inner-two, 
+#card-three:checked ~ .container .inner-three {
+  opacity: 1;
+  visibility: visible;
+}
+
+#card-one:checked ~ .container .inner-two, 
+#card-two:checked ~ .container .inner-three, 
+#card-three:checked ~ .container .inner-one {
+    transform: scale(.85);
+  transform: scale(1) translate(-20rem);
+}
+</style>
+	
+	<script src="https://100dayscss.com/codepen/js/jquery.min.js"></script>
+    <script src="https://codepen.io/fracturedNight/pen/exgzZg.js"></script>
+
+</body>
+</html>
